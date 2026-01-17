@@ -18,14 +18,25 @@ This project was initialized with `create-next-app` using the following configur
 - **Turbopack:** Yes
 - **Import Alias:** Default (`@/*`)
 
+### Shadcn UI Integration
+
+- `npx shadcn@latest init -d`: Initializes Shadcn UI components (components.json, global.css, tailwind.config.ts) in the project.
+- `npx shadcn@latest add avatar badge button card checkbox command dialog dropdown-menu form input label navigation-menu radio-group select separator sheet sidebar skeleton slider sonner switch table tabs textarea tooltip`: add ui components under src/components/ui.
+
 ## Recommended Development Tools
 
 ### VS Code Extensions
 
 - ES7+ React/Redux/React-Native snippets
 - Prettier - Code formatter
+- Tailwind CSS IntelliSense
 
 ### Browser Extensions
 
 - Pesticide for Chrome (CSS layout debugging)
 - Redux DevTools (State management debugging)
+
+### Notes
+
+- route with parenthesis is not showing in the router, just for grouping purposes
+- `rafce` to create react arrow function component snippet
