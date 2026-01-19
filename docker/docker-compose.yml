@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgis/postgis
+    container_name: postgresql-postgis
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: nextproject
+      POSTGRES_PASSWORD: nextproject
+      POSTGRES_DB: nextproject_db
+    volumes:
+      - ./postgres-data:/var/lib/postgresql
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U nextproject"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
