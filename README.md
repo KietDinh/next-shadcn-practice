@@ -17,6 +17,7 @@ This project was initialized with `create-next-app` using the following configur
 - **App Router:** Yes
 - **Turbopack:** Yes
 - **Import Alias:** Default (`@/*`)
+- copy package.json
 
 ### Shadcn UI Integration
 
@@ -42,6 +43,19 @@ Make sure to pick container with postgis extension enabled.
 
 - docker compose up -d: Start PostgreSQL database in a Docker container.
 - docker exec -it container_name psql -U username -d database: Access PostgreSQL database inside the container.
+
+### Server/Backend some commands
+
+- npm init -y: Initialize a new Node.js project.
+- copy package.json
+- npx tsc --init
+- npx prisma init
+- prisma:generate : creates the Prisma Client based on your schema (generate TypeScript types in node_modules/.prisma/client/)
+- "postprisma:generate": "shx cp -r node_modules/.prisma/client/index.d.ts ../client/src/types/prismaTypes.d.ts" : Copy generated Prisma types to client project for type safety, so client will have same types that server generated
+
+- npx prisma migrate reset : Reset the database and apply all migrations from scratch.
+- npx prisma migrate dev --name init : Create and apply a new migration to the database based on the current Prisma schema.
+- npx run seed : Custom script to seed the database with initial data.
 
 ### Notes
 
