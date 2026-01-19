@@ -36,6 +36,13 @@ This project was initialized with `create-next-app` using the following configur
 - Pesticide for Chrome (CSS layout debugging)
 - Redux DevTools (State management debugging)
 
+### Docker Setup
+
+Make sure to pick container with postgis extension enabled.
+
+- docker compose up -d: Start PostgreSQL database in a Docker container.
+- docker exec -it container_name psql -U username -d database: Access PostgreSQL database inside the container.
+
 ### Notes
 
 - route with parenthesis is not showing in the router, just for grouping purposes
