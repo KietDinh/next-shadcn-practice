@@ -4,8 +4,11 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import helmet from "helmet"; // Set HTTP headers to protect against vulnerabilities (XSS and clickjacking)
 import morgan from "morgan"; // Logs HTTP requests to the console for monitoring and debugging
+import { authMiddleware } from "./middlewares/authMiddleware";
 
 /* ROUTE IMPORT */
+import tenantRoutes from "./routes/tenantRoutes";
+import managerRoutes from "./routes/managerRoutes";
 
 /* CONFIGURATIONS */
 dotenv.config();
@@ -22,6 +25,9 @@ app.use(cors()); // Enable CORS for all origins
 app.get("/", (req, res) => {
   res.send("This is home route");
 });
+
+app.use("/tenants", authMiddleware(["tenant"]), tenantRoutes);
+app.use("/managers", authMiddleware(["manager"]), managerRoutes);
 
 /* SERVER */
 const port = Number(process.env.PORT) || 3002;
