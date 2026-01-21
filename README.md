@@ -1,4 +1,4 @@
-# Next.js + Shadcn Project Notes
+# Enterprise-level Next.js + Shadcn Project
 
 **Resources:**
 
@@ -62,3 +62,5 @@ Make sure to pick container with postgis extension enabled.
 - route with parenthesis is not showing in the router, just for grouping purposes
 - `rafce` to create react arrow function component snippet
 - router doesn't handle refreshing correctly, need to use window.location
+
+- `build.mutation<Tenant, {cognitoId: string} & Partial<Tenant>}>` means that we're going to receive a Tenant from backend, and we're sending to the backend cognitoId and a partial of Tenant - meaning we don't have to give out everything to update, we just give out what we want to update to the backend
