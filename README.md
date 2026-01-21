@@ -61,3 +61,4 @@ Make sure to pick container with postgis extension enabled.
 
 - route with parenthesis is not showing in the router, just for grouping purposes
 - `rafce` to create react arrow function component snippet
+- router doesn't handle refreshing correctly, need to use window.location
