@@ -14,7 +14,7 @@ This project was initialized with `create-next-app` using the following configur
 - **ESLint:** Yes
 - **Tailwind CSS:** Yes
 - **`src/` Directory:** Yes
-- **App Router:** Yes
+- **App Router:** Yes -> make sure to use `next/navigation` and NOT `next/router`
 - **Turbopack:** Yes
 - **Import Alias:** Default (`@/*`)
 - copy package.json
