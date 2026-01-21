@@ -57,6 +57,19 @@ Make sure to pick container with postgis extension enabled.
 - npx prisma migrate dev --name init : Create and apply a new migration to the database based on the current Prisma schema.
 - npx run seed : Custom script to seed the database with initial data.
 
+### Env
+
+## Frontend/Client
+
+- NEXT_PUBLIC_API_BASE_URL=
+- NEXT_PUBLIC_AWS_COGNITO_USER_POOL_ID=
+- NEXT_PUBLIC_AWS_COGNITO_USER_POOL_CLIENT_ID=
+
+## Backend/Server
+
+- PORT=3001
+- DATABASE_URL="postgresql://[username]:[pw]@localhost:5432/[database_name]?schema=public"
+
 ### Notes
 
 - route with parenthesis is not showing in the router, just for grouping purposes
